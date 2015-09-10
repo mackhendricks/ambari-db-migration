@@ -4,11 +4,6 @@
 -- Source Schemata: ambari
 -- Created: Thu Sep 10 02:55:35 2015
 -- Workbench Version: 6.3.4
--- Modifications:
--- Sep 10 by Mack Hendricks 
---          Changed the table name from clusterhostmapping to ClusterHostMapping.  
---          Without this change Ambari will not work properly because it uses
---          the case sensitive name in the Java code to query this table.
 -- ----------------------------------------------------------------------------
 
 SET FOREIGN_KEY_CHECKS = 0;
@@ -385,7 +380,7 @@ CREATE TABLE IF NOT EXISTS `ambari`.`clusterconfigmapping` (
 -- ----------------------------------------------------------------------------
 -- Table ambari.clusterhostmapping
 -- ----------------------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ambari`.`ClusterHostMapping` (
+CREATE TABLE IF NOT EXISTS `ambari`.`clusterhostmapping` (
   `cluster_id` BIGINT NOT NULL COMMENT '',
   `host_name` VARCHAR(255) NOT NULL COMMENT '',
   PRIMARY KEY (`cluster_id`, `host_name`),
